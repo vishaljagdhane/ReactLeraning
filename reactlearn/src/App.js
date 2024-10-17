@@ -14,7 +14,7 @@ function App() {
         }}
       >
         <div style={{ marginBottom: '20px',padding:'15px' }}> {/* Spacing between components */}
-          <FirstProgramOfReactJs />
+          <FirstProgramOfReactJs/>
         </div>
         <div style={{ marginBottom: '20px' }}>
      
