@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import FirstProgramOfReactJs from './BasicOfReeact/FristProgramOfReactJs';
+import BasicOfArrowFunctions from './JavascriptES6/BasicOfArrowFunctions';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <FirstProgramOfReactJs />
         </div>
         <div style={{ marginBottom: '20px' }}>
-     
+     <BasicOfArrowFunctions/>
         </div>
         <div style={{ marginBottom: '20px' }}>
 
