@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import FirstProgramOfReactJs from './BasicOfReeact/FristProgramOfReactJs';
 import BasicOfArrowFunctions from './JavascriptES6/BasicOfArrowFunctions';
+import ArraowFunctionWithParamter from './JavascriptES6/ArraowFunctionWithParamter';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
      <BasicOfArrowFunctions/>
         </div>
         <div style={{ marginBottom: '20px' }}>
-
+        <ArraowFunctionWithParamter/>
         </div>
         {/* Add more components as needed */}
       </div>
