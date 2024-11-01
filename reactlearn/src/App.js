@@ -8,6 +8,7 @@ import TernaryOperator from './JavascriptES6/Ternary_Opreator';
 import SecondExampleTernaryOpretor from './JavascriptES6/SecondExampleTernaryOpretor';
 import BasicProps from './Props/BasicProps';
 import SendPropsVeryBasic from './Props/SendPropsVeryBasic';
+import JavascriptEvent from './Event/JAvascriptEvent';
 
 function App() {
   return (
@@ -44,6 +45,9 @@ function App() {
                           <div style={{ marginBottom: '20px' ,borderBottom:'3px solid red',padding:'15px'}}>
                           <SendPropsVeryBasic baiscProps ="It is very Basic Props"/>
                                 </div>
+                                <div style={{ marginBottom: '20px' ,borderBottom:'3px solid red',padding:'15px'}}>
+                                <JavascriptEvent/>
+                                      </div>
     
       </div>
     </>

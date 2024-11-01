@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function ArrayBasicProps({sendArray }) {
+export default function ArrayBasicProps({sendArray ,TitleData}) {
   return (
     <>
-      <h1>This Array sending props</h1>
+<h1>{TitleData}</h1>
       <table border="1" cellPadding="10">
       <thead>
         <tr>

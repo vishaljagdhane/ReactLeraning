@@ -89,7 +89,9 @@ export default function SendPropsVeryBasic( {baiscProps}) {
   return (
     <>
       <h1>Send Props Very Basic{baiscProps} </h1>
-      <ArrayBasicProps sendArray={dummyData}/>
+      <ArrayBasicProps sendArray={dummyData} TitleData="This Array Data"/>
+  
+      <ArrayBasicProps sendArray={user} TitleData="This JSON Data declear JSON file and Passpros" />
     </>
   )
 }
