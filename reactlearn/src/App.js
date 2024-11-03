@@ -10,6 +10,7 @@ import BasicProps from './Props/BasicProps';
 import SendPropsVeryBasic from './Props/SendPropsVeryBasic';
 import JavascriptEvent from './Event/JAvascriptEvent';
 import BasicOfIfStatemnt from './CondtionalStatment/BasicOfIfStatemnt';
+import BasicList from './ListComponent/BasicList';
 
 function App() {
   return (
@@ -50,6 +51,9 @@ function App() {
         </div>
         <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
           <BasicOfIfStatemnt/>
+        </div>
+        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+          <BasicList/>
         </div>
 
       </div>
