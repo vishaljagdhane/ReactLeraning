@@ -9,46 +9,49 @@ import SecondExampleTernaryOpretor from './JavascriptES6/SecondExampleTernaryOpr
 import BasicProps from './Props/BasicProps';
 import SendPropsVeryBasic from './Props/SendPropsVeryBasic';
 import JavascriptEvent from './Event/JAvascriptEvent';
+import BasicOfIfStatemnt from './CondtionalStatment/BasicOfIfStatemnt';
 
 function App() {
   return (
     <>
       <div
         style={{
-      position:'relative',
-      width:'100%',
-      height:'auto'
-
+          position: 'relative',
+          width: '100%',
+          height: 'auto'
         }}
       >
-        <div style={{ marginBottom: '20px',padding:'15px',borderBottom:'3px solid red' }}> {/* Spacing between components */}
+        <div style={{ marginBottom: '20px', padding: '15px', borderBottom: '3px solid red' }}> {/* Spacing between components */}
           <FirstProgramOfReactJs />
         </div>
-        <div style={{ marginBottom: '20px' ,borderBottom:'3px solid red',padding:'15px'}}>
-     <BasicOfArrowFunctions/>
+        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+          <BasicOfArrowFunctions />
         </div>
-        <div style={{ marginBottom: '20px' ,borderBottom:'3px solid red',padding:'15px'}}>
-        <ArraowFunctionWithParamter/>
+        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+          <ArraowFunctionWithParamter />
         </div>
-        <div style={{ marginBottom: '20px' ,borderBottom:'3px solid red',padding:'15px'}}>
-  <ArrayAndMap/>
+        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+          <ArrayAndMap />
         </div>
-        <div style={{ marginBottom: '20px' ,borderBottom:'3px solid red',padding:'15px'}}>
-        <TernaryOperator/>
-              </div>
-              <div style={{ marginBottom: '20px' ,borderBottom:'3px solid red',padding:'15px'}}>
-              <SecondExampleTernaryOpretor/>
-                    </div>
-                    <div style={{ marginBottom: '20px' ,borderBottom:'3px solid red',padding:'15px'}}>
-                    <BasicProps/>
-                          </div>
-                          <div style={{ marginBottom: '20px' ,borderBottom:'3px solid red',padding:'15px'}}>
-                          <SendPropsVeryBasic baiscProps ="It is very Basic Props"/>
-                                </div>
-                                <div style={{ marginBottom: '20px' ,borderBottom:'3px solid red',padding:'15px'}}>
-                                <JavascriptEvent/>
-                                      </div>
-    
+        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+          <TernaryOperator />
+        </div>
+        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+          <SecondExampleTernaryOpretor />
+        </div>
+        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+          <BasicProps />
+        </div>
+        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+          <SendPropsVeryBasic baiscProps="It is very Basic Props" />
+        </div>
+        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+          <JavascriptEvent />
+        </div>
+        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+          <BasicOfIfStatemnt/>
+        </div>
+
       </div>
     </>
   );
