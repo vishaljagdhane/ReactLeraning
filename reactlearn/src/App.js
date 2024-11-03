@@ -11,6 +11,7 @@ import SendPropsVeryBasic from './Props/SendPropsVeryBasic';
 import JavascriptEvent from './Event/JAvascriptEvent';
 import BasicOfIfStatemnt from './CondtionalStatment/BasicOfIfStatemnt';
 import BasicList from './ListComponent/BasicList';
+import TextFiledUsing from './GeetingUserValue/TextFiledUsing';
 
 function App() {
   return (
@@ -55,7 +56,9 @@ function App() {
         <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
           <BasicList/>
         </div>
-
+        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+        <TextFiledUsing/>
+      </div>
       </div>
     </>
   );
