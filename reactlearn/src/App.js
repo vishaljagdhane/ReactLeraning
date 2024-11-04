@@ -12,6 +12,9 @@ import JavascriptEvent from './Event/JAvascriptEvent';
 import BasicOfIfStatemnt from './CondtionalStatment/BasicOfIfStatemnt';
 import BasicList from './ListComponent/BasicList';
 import TextFiledUsing from './GeetingUserValue/TextFiledUsing';
+import BasicMemo from './Memo/BasicMemo';
+import BasicOfHooks from './Hooks/BasicOfHooks';
+import BasicOfUseState from './Hooks/BasicOfUseState';
 
 function App() {
   return (
@@ -51,14 +54,23 @@ function App() {
           <JavascriptEvent />
         </div>
         <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
-          <BasicOfIfStatemnt/>
+          <BasicOfIfStatemnt />
         </div>
         <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
-          <BasicList/>
+          <BasicList />
         </div>
         <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
-        <TextFiledUsing/>
-      </div>
+          <TextFiledUsing />
+        </div>
+        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+          <BasicMemo />
+        </div>
+        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+          <BasicOfHooks />
+        </div>
+        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+          <BasicOfUseState />
+        </div>
       </div>
     </>
   );
