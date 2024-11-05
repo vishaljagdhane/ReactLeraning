@@ -18,6 +18,8 @@ import BasicOfUseState from './Hooks/BasicOfUseState';
 import BasicFetchApi from './API_Services/BasicFetchApi';
 import IntermediateExamaple from './API_Services/IntermediateExamaple';
 import Axiosusemapapi from './API_Services/Axiosusemapapi';
+import BasisPost from './API_Services/BasisPost';
+import PostSelfTry from './API_Services/PostSelfTry';
 
 function App() {
   return (
@@ -85,6 +87,14 @@ function App() {
         <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
        <h3>Fetch API Functions using Axios </h3>
         <Axiosusemapapi/>
+      </div>
+        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+       <h3>Basic POST API</h3>
+        <BasisPost/>
+      </div>
+        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+       <h3>Post Self Try</h3>
+        <PostSelfTry/>
       </div>
       </div>
     </>
