@@ -1,0 +1,189 @@
+api_services.js Basic Api 
+
+import axios from 'axios';
+
+// Define the API call function
+const getUsers = async () => {
+    try {
+        // Making GET request to the API
+        const response = await axios.get("http://localhost:3002/users");
+        return response.data;  // Return the data to be used in the component
+    } catch (error) {
+        console.error("Error fetching users:", error);
+        throw error; // Rethrow error so component can handle it if needed
+    }
+};
+
+export default { getUsers };  // Export the service for use in components
+
+
+import React, { useEffect, useState } from 'react';
+import apiService from './api_services';  // Import the api_service file
+
+export default function Axiosusemapapi() {
+    const [fetchapi, setFetchApi] = useState([]);
+    const [error, setError] = useState(null);  // Handle errors
+    const [loading, setLoading] = useState(true);  // Handle loading state
+
+    useEffect(() => {
+        console.log("Fetching data using API service");
+
+        // Call the getUsers API service
+        apiService.getUsers()
+            .then((data) => {
+                setFetchApi(data);  // Set data if API call is successful
+                setLoading(false);   // Turn off loading
+            })
+            .catch((error) => {
+                setError("Failed to fetch data.");  // Set error if the API call fails
+                setLoading(false);  // Turn off loading even in case of error
+            });
+    }, []);  // Empty dependency array to call this on component mount only
+
+    return (
+        <div>
+            <h1>Very Basic Fetch API with Axios</h1>
+            
+            {loading && <p>Loading...</p>}
+            {error && <p>{error}</p>}
+
+            <table border={2}>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Middle Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Mobile Number</th>
+                        <th>Education</th>
+                        <th>College</th>
+                        <th>Local Address</th>
+                        <th>Permanent Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        fetchapi.map((item, index) => (
+                            <tr key={index}>
+                                <td>{item.id}</td>
+                                <td>{item.name}</td>
+                                <td>{item.midName}</td>
+                                <td>{item.lastName}</td>
+                                <td>{item.email}</td>
+                                <td>{item.mobile}</td>
+                                <td>{item.educations}</td>
+                                <td>{item.college}</td>
+                                <td>{item.localAddress}</td>
+                                <td>{item.permanentAddress}</td>
+                            </tr>
+                        ))
+                    }
+                </tbody>
+            </table>
+        </div>
+    );
+}
+
+
+//using by the sigle evn file with api 
+//env file 
+REACT_APP_API_BASE_URL=http://localhost:3002
+
+//
+api_services.js (with environment variable)
+
+import axios from 'axios';
+
+// Use the environment variable for the base URL
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
+const getUsers = async () => {
+    try {
+        // Using the base URL from environment variable
+        const response = await axios.get(`${API_BASE_URL}/users`);
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching users:", error);
+        throw error;
+    }
+};
+
+export default { getUsers };
+
+To add multiple API URLs to your .env file and use them in your React project, you can define different environment variables for each API endpoint. This way, you can keep track of different base URLs or individual endpoints and call them easily in your code.
+
+Step 1: Define Multiple API URLs in the .env file
+
+In your .env file, you can add several API endpoints like this:
+.env
+
+REACT_APP_API_BASE_URL=http://localhost:3002
+REACT_APP_API_USERS=http://localhost:3002/users
+REACT_APP_API_PRODUCTS=http://localhost:3002/products
+REACT_APP_API_ORDERS=http://localhost:3002/orders
+REACT_APP_API_CATEGORIES=http://localhost:3002/categories
+REACT_APP_API_REVIEWS=http://localhost:3002/reviews
+REACT_APP_API_CARTS=http://localhost:3002/carts
+REACT_APP_API_CHECKOUT=http://localhost:3002/checkout
+REACT_APP_API_AUTHORS=http://localhost:3002/authors
+REACT_APP_API_ORDERS_HISTORY=http://localhost:3002/orders/history
+
+Step 2: Use Environment Variables in Your api_services.js
+Now that you have multiple API URLs defined in your .env file, you can access them in your api_services.js file using process.env.
+
+api_services.js
+import axios from 'axios';
+
+// Fetch the URLs from the environment file
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+const API_USERS = process.env.REACT_APP_API_USERS;
+const API_PRODUCTS = process.env.REACT_APP_API_PRODUCTS;
+const API_ORDERS = process.env.REACT_APP_API_ORDERS;
+const API_CATEGORIES = process.env.REACT_APP_API_CATEGORIES;
+const API_REVIEWS = process.env.REACT_APP_API_REVIEWS;
+const API_CARTS = process.env.REACT_APP_API_CARTS;
+const API_CHECKOUT = process.env.REACT_APP_API_CHECKOUT;
+const API_AUTHORS = process.env.REACT_APP_API_AUTHORS;
+const API_ORDERS_HISTORY = process.env.REACT_APP_API_ORDERS_HISTORY;
+
+// Example of API call functions
+const getUsers = async () => {
+    try {
+        const response = await axios.get(API_USERS);
+        return response.data; // Return data from response
+    } catch (error) {
+        console.error("Error fetching users:", error);
+        throw error; // Rethrow the error for the component to handle
+    }
+};
+
+const getProducts = async () => {
+    try {
+        const response = await axios.get(API_PRODUCTS);
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching products:", error);
+        throw error;
+    }
+};
+
+const getOrders = async () => {
+    try {
+        const response = await axios.get(API_ORDERS);
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching orders:", error);
+        throw error;
+    }
+};
+
+// Add more API call functions as needed
+// Example functions for other APIs can follow the same pattern.
+
+export default {
+    getUsers,
+    getProducts,
+    getOrders,
+    // Add other exports here
+};
