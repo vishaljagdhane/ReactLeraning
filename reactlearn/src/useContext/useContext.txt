@@ -1,0 +1,104 @@
+import React, { createContext, useState, useContext } from 'react';
+
+// Create the context
+const DataContext = createContext();
+
+2. Creating the DataProvider Component
+This component will act as the provider of the context data. You will initialize 5 pieces of state here using the useState hook, and provide them via the context.
+
+
+// DataProvider Component
+export const DataProvider = ({ children }) => {
+  // Defining 5 useState hooks for different state variables
+  const [state1, setState1] = useState(null);
+  const [state2, setState2] = useState('');
+  const [state3, setState3] = useState(0);
+  const [state4, setState4] = useState([]);
+  const [state5, setState5] = useState(false);
+
+  // Create an object that holds all the states and setters
+  const contextValue = {
+    state1,
+    setState1,
+    state2,
+    setState2,
+    state3,
+    setState3,
+    state4,
+    setState4,
+    state5,
+    setState5,
+  };
+
+  return (
+    <DataContext.Provider value={contextValue}>
+      {children}
+    </DataContext.Provider>
+  );
+};
+
+3. Consuming the Context in Child Components
+Now, any child component wrapped inside the DataProvider can access the context and use the state values or update them.
+
+Example 1: Using the Context in a Component
+In the component where you want to access or update the state, you can use the useContext hoo
+
+import React, { useContext } from 'react';
+import { DataContext } from './DataProvider'; // Path to your DataProvider file
+
+const SomeComponent = () => {
+  // Destructure the values from the context
+  const {
+    state1, setState1,
+    state2, setState2,
+    state3, setState3,
+    state4, setState4,
+    state5, setState5
+  } = useContext(DataContext); // Use the context
+
+  return (
+    <div>
+      <h2>State1: {state1}</h2>
+      <button onClick={() => setState1("New Value")}>Update State1</button>
+
+      <h2>State2: {state2}</h2>
+      <button onClick={() => setState2("Hello World")}>Update State2</button>
+
+      <h2>State3: {state3}</h2>
+      <button onClick={() => setState3(state3 + 1)}>Increment State3</button>
+
+      <h2>State4: {JSON.stringify(state4)}</h2>
+      <button onClick={() => setState4([...state4, 'New Item'])}>Add to State4</button>
+
+      <h2>State5: {state5 ? 'True' : 'False'}</h2>
+      <button onClick={() => setState5(!state5)}>Toggle State5</button>
+    </div>
+  );
+};
+
+export default SomeComponent;
+
+
+4. Wrapping Components with DataProvider
+Ensure that your components that need to consume the context are wrapped in the DataProvider in your application.
+
+Example of App Componen
+
+import React from 'react';
+import { DataProvider } from './DataProvider'; // Path to your DataProvider file
+import SomeComponent from './SomeComponent';
+import AnotherComponent from './AnotherComponent';
+
+const App = () => {
+  return (
+    <DataProvider>
+      <div>
+        <h1>React Context Example</h1>
+        <SomeComponent />
+        <AnotherComponent />
+      </div>
+    </DataProvider>
+  );
+};
+
+export default App;

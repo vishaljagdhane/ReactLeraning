@@ -20,8 +20,15 @@ import IntermediateExamaple from './API_Services/IntermediateExamaple';
 import Axiosusemapapi from './API_Services/Axiosusemapapi';
 import BasisPost from './API_Services/BasisPost';
 import PostSelfTry from './API_Services/PostSelfTry';
-
+import PostApiUsingJson from './API_Services/PostApiUsingJson';
+import BasicExampleUseContext from './useContext/BasicExampleUseContext';
+import {createContext, useContext,useState} from 'react'
+import RecivedContextProvider from './useContext/RecivedContextProvider';
+export  const themProvider = createContext() 
 function App() {
+
+//this a create context context is created
+  const [theme, setTheme] = useState('light');
   return (
     <>
       <div
@@ -95,6 +102,18 @@ function App() {
         <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
        <h3>Post Self Try</h3>
         <PostSelfTry/>
+      </div>
+        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+
+        <PostApiUsingJson/>
+      </div>
+        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+
+        <BasicExampleUseContext/>
+   <themProvider.Provider value={{ theme, setTheme }}>
+   
+   <RecivedContextProvider/>
+   </themProvider.Provider>
       </div>
       </div>
     </>
