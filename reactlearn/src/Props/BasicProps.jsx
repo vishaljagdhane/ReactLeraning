@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { DataContext } from '../useContext/DataProviderComman';
 
 export default function BasicProps() {
+  const {username ,setUserName} =useContext(DataContext)
   return (
     <>
+    <h1> this is use by ccommn context throw geeting  {username}</h1>
+    <button onClick={()=>setUserName('Jagdhane')}>Change Values</button>
       <h1>What are Props?</h1>
       <p>
         Props (short for "properties") are a mechanism in React for passing data from one component to another. They are used to customize a component's behavior and render different content.
