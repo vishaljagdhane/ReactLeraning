@@ -22,103 +22,109 @@ import BasisPost from './API_Services/BasisPost';
 import PostSelfTry from './API_Services/PostSelfTry';
 import PostApiUsingJson from './API_Services/PostApiUsingJson';
 import BasicExampleUseContext from './useContext/BasicExampleUseContext';
-import {createContext, useContext,useState} from 'react'
+import { createContext, useContext, useState } from 'react'
 import RecivedContextProvider from './useContext/RecivedContextProvider';
-import DataProviderComman ,{DataContext}from './useContext/DataProviderComman';
+import DataProviderComman, { DataContext } from './useContext/DataProviderComman';
+import BasicInformationOfuseRef from './UseRef/BasicInformationOfuseRef';
+import Usereducer from './useReducer/Usereducer';
 
 
 function App() {
 
-//this a create context context is created
+  //this a create context context is created
 
   return (
     <>
-    <DataProviderComman>
-      <div
-        style={{
-          position: 'relative',
-          width: '100%',
-          height: 'auto'
-        }}
-      >
-        <div style={{ marginBottom: '20px', padding: '15px', borderBottom: '3px solid red' }}> {/* Spacing between components */}
-          <FirstProgramOfReactJs />
-        </div>
-        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
-          <BasicOfArrowFunctions />
-        </div>
-        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
-          <ArraowFunctionWithParamter />
-        </div>
-        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
-          <ArrayAndMap />
-        </div>
-        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
-          <TernaryOperator />
-        </div>
-        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
-          <SecondExampleTernaryOpretor />
-        </div>
-        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
-          <BasicProps />
-        </div>
-        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
-          <SendPropsVeryBasic baiscProps="It is very Basic Props" />
-        </div>
-        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
-          <JavascriptEvent />
-        </div>
-        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
-          <BasicOfIfStatemnt />
-        </div>
-        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
-          <BasicList />
-        </div>
-        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
-          <TextFiledUsing />
-        </div>
-        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
-          <BasicMemo />
-        </div>
-        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
-          <BasicOfHooks />
-        </div>
-        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
-          <BasicOfUseState />
-        </div>
-        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
-       <h3>Fetch API Functions</h3>
-        <BasicFetchApi />
-      </div>
-        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
-       <h3>Fetch API Functions</h3>
-        <IntermediateExamaple />
-      </div>
-        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
-       <h3>Fetch API Functions using Axios </h3>
-        <Axiosusemapapi/>
-      </div>
-        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
-       <h3>Basic POST API</h3>
-        <BasisPost/>
-      </div>
-        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
-       <h3>Post Self Try</h3>
-        <PostSelfTry/>
-      </div>
-        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+      <DataProviderComman>
+        <div
+          style={{
+            position: 'relative',
+            width: '100%',
+            height: 'auto'
+          }}
+        >
+          <div style={{ marginBottom: '20px', padding: '15px', borderBottom: '3px solid red' }}> {/* Spacing between components */}
+            <FirstProgramOfReactJs />
+          </div>
+          <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+            <BasicOfArrowFunctions />
+          </div>
+          <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+            <ArraowFunctionWithParamter />
+          </div>
+          <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+            <ArrayAndMap />
+          </div>
+          <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+            <TernaryOperator />
+          </div>
+          <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+            <SecondExampleTernaryOpretor />
+          </div>
+          <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+            <BasicProps />
+          </div>
+          <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+            <SendPropsVeryBasic baiscProps="It is very Basic Props" />
+          </div>
+          <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+            <JavascriptEvent />
+          </div>
+          <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+            <BasicOfIfStatemnt />
+          </div>
+          <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+            <BasicList />
+          </div>
+          <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+            <TextFiledUsing />
+          </div>
+          <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+            <BasicMemo />
+          </div>
+          <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+            <BasicOfHooks />
+          </div>
+          <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+            <BasicOfUseState />
+          </div>
+          <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+            <h3>Fetch API Functions</h3>
+            <BasicFetchApi />
+          </div>
+          <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+            <h3>Fetch API Functions</h3>
+            <IntermediateExamaple />
+          </div>
+          <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+            <h3>Fetch API Functions using Axios </h3>
+            <Axiosusemapapi />
+          </div>
+          <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+            <h3>Basic POST API</h3>
+            <BasisPost />
+          </div>
+          <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+            <h3>Post Self Try</h3>
+            <PostSelfTry />
+          </div>
+          <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
 
-        <PostApiUsingJson/>
-      </div>
-        <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+            <PostApiUsingJson />
+          </div>
+          <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
 
-        <BasicExampleUseContext/>
+            <BasicExampleUseContext />
+            <RecivedContextProvider />
 
-   
-   <RecivedContextProvider/>
-
-      </div>
-      </div>
+          </div>
+          <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+          <BasicInformationOfuseRef/>
+          </div>
+          <div style={{ marginBottom: '20px', borderBottom: '3px solid red', padding: '15px' }}>
+          <Usereducer/>
+          </div>
+        </div>
       </DataProviderComman>
     </>
   );
